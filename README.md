@@ -3,7 +3,8 @@
 
 ![ResQTweet Banner](https://img.shields.io/badge/ResQTweet-Crisis%20Detection-blue)   ![Natural Language Processing with Disaster Tweets](https://img.shields.io/badge/Natural%20Language%20Processing%20with%20Disaster%20Tweets-black)   
 
-![Hackathon](https://img.shields.io/badge/Global%20AI-Buildathon%202025-purple)  
+![Hackathon](https://img.shields.io/badge/Global%20AI-Buildathon%202025-purple)  [![YouTube Pitch](https://img.shields.io/badge/YouTube-Pitch-red?logo=youtube)](https://www.youtube.com/watch?v=https://youtu.be/FGQlL3H_-oA?si=oMMIbS4riez-0IOU)
+
 
 ![SDG 11](https://img.shields.io/badge/SDG-11%20Sustainable%20Cities%20&%20Communities-yellow)   ![SDG 13](https://img.shields.io/badge/SDG-13%20Climate%20Action-brightgreen)  
 
@@ -80,19 +81,22 @@ During natural disasters or humanitarian crises, timely information is critical.
 # 🔄 Process Pipeline
 ```
               ┌─────────────────────────────┐
-              │   Load train_cleaned.csv    │
-              │ (id, keyword, location, text, y) │
-              └─────────────┬─────────────┘
+              │   Load tweets_data.csv      │
+              │                             │
+              └─────────────┬───────────────┘
                             │
-                 ┌──────────▼──────────┐
-                 │   Preprocessing     │
-                 │  - Clean text & keyword columns │
-                 │  - Remove URLs, mentions, hashtags, non-alphabetic chars │
-                 │  - Lowercase all text │
+                 ┌──────────▼─────────────┐
+                 │     Preprocessing      │
+                 │    - Clean text &      |
+                 |       keyword columns  │
+                 │    - Remove URLs,      |
+                 |      mentions,hashtags,|
+                 |   non-alphabetic chars │
+                 │  - Lowercase all text  │
                  │  - Remove extra spaces │
-                 │  - Handle missing values (NaNs) │
-                 │  - Drop irrelevant/noisy columns (e.g., location) │
-                 └──────────┬──────────┘
+                 │  - Handle NaNs         │
+                 │  - Drop irrelevant cols│
+                 └──────────┬─────────────┘
                             │
           ┌─────────────────┴─────────────────┐
           │                                   │
