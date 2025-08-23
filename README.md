@@ -98,24 +98,24 @@ During natural disasters or humanitarian crises, timely information is critical.
                  │  - Drop irrelevant cols│
                  └──────────┬─────────────┘
                             │
-          ┌─────────────────┴─────────────────┐
-          │                                   │
+          ┌─────────────────┴──────────────────┐
+          │                                    │
  ┌────────▼─────────┐                 ┌────────▼─────────┐
  │  TF-IDF on text  │                 │ TF-IDF on keyword│
- │  (unigrams+bigrams, top 6000) │    │  (unigrams, all) │
+ │(unigrams+bigrams)│                 │  (unigrams, all) │
  └────────┬─────────┘                 └────────┬─────────┘
-          │                                   │
-          └─────────────┬─────────────────────┘
-                        ▼
+          │                                    │
+          └────────────────┬───────────────────┘
+                           ▼
       ┌───────────────────────────────────────────────┐
       │          Combine Features (hstack)            │
       │ [text TF-IDF + keyword TF-IDF + keyword_flag] │
-      └───────────────────────────┬───────────────────┘
-                         │
-             ┌───────────▼───────────────┐
-             │   Split train/validation  │
-             │   (stratified 80-20 split)│
-             └───────────┬───────────────┘
+      └───────────────────┬───────────────────────────┘
+                          │
+             ┌────────────▼───────────────┐
+             │   Split train/validation   │
+             │   (stratified 80-20 split) │
+             └───────────┬────────────────┘
                          │
              ┌───────────▼───────────────┐
              │        Train Model        │
