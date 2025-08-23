@@ -49,3 +49,33 @@ disaster_alert_system("Earthquake of 6.1 magnitude hits California.")
 
 disaster_alert_system("Happy birthday to my dog 🎂🐶")
 # ✅ No disaster detected.
+```
+
+
+
+# 🧠 Why This Matters
+
+This tool can be integrated into:
+
+Disaster monitoring dashboards
+
+Social media scrapers
+
+Emergency alert bots
+
+Real-time crisis response tools
+
+---
+# ♻️ Future Work
+
+Live integration with Twitter API
+
+Dashboard for alert visualization
+
+Multilingual disaster detection
+
+Named Entity Recognition for extracting locations
+
+🧑‍💻 Author
+
+Made with ♥️ during the [Global AI Buildathon Hackathon 2025] by [Your Name].
